@@ -7,7 +7,9 @@
     },
     "scripts": {
         "build": "vite build",
+        "build:spa": "vite build --config vite.config.spa.js",
         "dev": "vite",
+        "dev:spa": "vite --config vite.config.spa.js",
         "lint": "eslint resources/js",
         "lint:fix": "eslint resources/js --fix",
         "prepare": "husky"

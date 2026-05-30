@@ -1,7 +1,10 @@
 import axios from 'axios'
 
+/** Local Herd: unset → `/api`. Vercel: set `VITE_API_URL` to Render API (e.g. https://church-cms-api.onrender.com/api). */
+const apiBase = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '')
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: apiBase,
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',

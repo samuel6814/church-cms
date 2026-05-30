@@ -15,7 +15,7 @@
 - `routes/api.php`, `routes/console.php`
 - `config/**` (unless a maintainer explicitly approves an infra hotfix)
 
-Production deploy uses **Neon (Postgres)** on Render or Vercel. Local Herd/SQLite is fine for UI work; production must use Postgres as shipped in the repo.
+Production: **Neon (Postgres)** backs the API on **Render (Docker)**; the React app is on **Vercel**. Local Herd + SQLite is fine for UI-only work.
 
 ## Git workflow
 
@@ -53,7 +53,7 @@ Login after seed: `admin@wis-cms.local` / `Admin@12345`
 
 ## Production deploy
 
-See **[DEPLOYMENT.md](./DEPLOYMENT.md)** — Render + Neon (recommended) and optional Vercel.
+See **[DEPLOYMENT.md](./DEPLOYMENT.md)** — Vercel (frontend) + Render Docker (API) + Neon (database).
 
 Reference playbooks (do not duplicate blindly; verify versions in repo):
 
@@ -62,6 +62,18 @@ Reference playbooks (do not duplicate blindly; verify versions in repo):
 - [`prod_assist/render-external-cron-pattern.md`](../prod_assist/render-external-cron-pattern.md)
 - [`prod_assist/ENV_WORKFLOW.md`](../prod_assist/ENV_WORKFLOW.md)
 
-## API from the frontend
+## API from the frontend (split deploy)
 
-The SPA uses a **relative** API base (`/api` in `resources/js/api/axios.js`). Same-origin deploy (Render or Vercel) needs no `VITE_API_URL` unless you split frontend and API later.
+Production uses **two hosts**:
+
+- **Vercel** — React (`npm run build:spa`)
+- **Render** — Laravel API
+
+Set `VITE_API_URL` on Vercel (e.g. `https://church-cms-api.onrender.com/api`).  
+Locally on Herd, leave it unset — `resources/js/api/axios.js` defaults to `/api`.
+
+```bash
+# Optional: UI-only dev against production/staging API
+cp .env.vercel.example .env.local
+npm run dev:spa
+```

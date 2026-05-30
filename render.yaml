@@ -1,10 +1,12 @@
-# Render Blueprint — Church CMS (Laravel + React)
-# Docs: docs/DEPLOYMENT.md · prod_assist/production-laravel.md
+# Render Blueprint — API via Docker (do NOT use Render "Native" PHP environment).
+# Frontend: Vercel (npm run build:spa). See docs/DEPLOYMENT.md.
 
 services:
   - type: web
-    name: church-cms
+    name: church-cms-api
     runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     plan: free
     region: oregon
     healthCheckPath: /up
@@ -40,13 +42,13 @@ services:
         value: local
       - key: MAIL_MAILER
         value: log
-      # Set in Render Dashboard (secrets):
       - key: APP_KEY
         sync: false
       - key: APP_URL
         sync: false
+      - key: FRONTEND_URL
+        sync: false
       - key: DB_URL
         sync: false
-      # Optional — external cron (prod_assist/render-external-cron-pattern.md):
       - key: CRON_TOKEN
         sync: false

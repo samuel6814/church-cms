@@ -291,7 +291,7 @@ SMS (Arkesel) and mail settings will be added when the communication module is i
 
 **Hackathon / UI work:** see [`docs/HACKATHON.md`](docs/HACKATHON.md) (UI-only scope, `develop` + `feat/*` branches).
 
-**Deploy (Render + Neon, optional Vercel):** see [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) and [`prod_assist/`](prod_assist/).
+**Deploy (split stack):** React on **Vercel**, Laravel API on **Render (Docker)** — not Render native PHP — database on **Neon**. Full guide: [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md). Playbooks: [`prod_assist/`](prod_assist/).
 
 1. Branch from `develop` (not `main`) — [`prod_assist/git-workflow.md`](prod_assist/git-workflow.md).
 2. Follow existing patterns: Form Requests, API Resources, branch scoping, activity logging.

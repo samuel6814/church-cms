@@ -19,8 +19,17 @@ prod_assist
 docs
 README.md
 npm-debug.log
-Dockerfile
 .dockerignore
+
+# Vercel / SPA — not needed in API image
+dist
+index.html
+vite.config.spa.js
+vercel.json
+.env.vercel.example
+resources/js
+resources/css
+public/build
 
 # Keep bootstrap/cache directory; exclude stale cached files only
 bootstrap/cache/*.php
