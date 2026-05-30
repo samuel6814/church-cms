@@ -72,8 +72,10 @@ export default function Portal() {
       <header className="shadow-sm" style={{backgroundColor:'var(--color-navy)'}}>
         <div className="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
           <div className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="Methodist Church Ghana Logo" className="w-8 h-8 object-contain" />
-            <h1 className="font-bold" style={{fontFamily:'var(--font-display)',fontSize:'22px',color:'var(--color-gold-light)'}}>WIS-CMS</h1>
+            <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={{color:'var(--color-gold-light)'}}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M10 10h4M12 7v3"/>
+            </svg>
+            <h1 className="font-bold" style={{fontFamily:'var(--font-display)',fontSize:'22px',color:'var(--color-gold-light)'}}>Admin Portal</h1>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3 pr-4" style={{borderRight:'1px solid rgba(255,255,255,0.1)'}}>

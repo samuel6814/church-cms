@@ -31,10 +31,12 @@ export default function Sidebar() {
     <div className="w-64 flex flex-col h-full flex-shrink-0" style={{backgroundColor:'var(--color-navy-deeper)'}}>
       <div className="px-6 py-5" style={{borderBottom:'1px solid rgba(255,255,255,0.1)'}}>
         <div className="flex items-center gap-3">
-          <img src="/images/logo.png" alt="Methodist Church Ghana Logo" className="w-9 h-9 object-contain flex-shrink-0" />
+          <svg className="w-9 h-9 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={{color:'var(--color-gold-light)'}}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M10 10h4M12 7v3"/>
+          </svg>
           <div>
-            <div className="text-white text-sm font-bold" style={{fontFamily:'var(--font-display)'}}>WIS-CMS</div>
-            <div className="text-xs" style={{color:'rgba(255,255,255,0.4)'}}>Methodist Church Ghana</div>
+            <div className="text-white text-sm font-bold" style={{fontFamily:'var(--font-display)'}}>Admin Portal</div>
+            <div className="text-xs" style={{color:'rgba(255,255,255,0.4)'}}>Organization CMS</div>
           </div>
         </div>
       </div>

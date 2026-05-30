@@ -89,7 +89,7 @@ export default function Dashboard() {
             {greeting()}, {user?.name?.split(' ')[0]}
           </h2>
           <p className="mt-1" style={{color:'rgba(255,255,255,0.8)'}}>
-            Here is what's happening at Wesleyan International today.
+            Here is what is happening at your organization today.
           </p>
         </div>
         <div className="absolute rounded-full"

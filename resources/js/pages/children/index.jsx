@@ -87,7 +87,7 @@ export default function ChildrenPage() {
           <h1 className="font-bold" style={{fontFamily:'var(--font-display)',fontSize:'32px',lineHeight:'40px',color:'var(--color-navy)'}}>
             Children's Register
           </h1>
-          <p style={{color:'#44474f'}}>Managing the future of the Methodist heritage.</p>
+          <p style={{color:'#44474f'}}>Managing your organization&apos;s next generation.</p>
         </div>
         {can('create children') && (
           <button onClick={() => navigate('/children/new')} className="btn-primary gap-2" style={{padding:'12px 24px'}}>

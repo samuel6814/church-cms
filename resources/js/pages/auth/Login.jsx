@@ -70,16 +70,18 @@ export default function Login() {
         <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center login-fade">
           {/* Logo tile */}
           <div className="mb-2 flex items-center justify-center">
-            <img src="/images/logo.png" alt="Methodist Church Ghana Logo" className="w-24 h-24 object-contain" />
+            <svg className="w-24 h-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={{color:'var(--color-gold-light)'}}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M10 10h4M12 7v3"/>
+            </svg>
           </div>
 
           <h1 className="font-bold mb-1"
               style={{fontFamily:'var(--font-display)',fontSize:'48px',lineHeight:'60px',letterSpacing:'-0.02em',color:'var(--color-gold-light)'}}>
-            WIS-CMS
+            Admin Portal
           </h1>
           <p className="italic"
              style={{fontFamily:'var(--font-display)',fontSize:'24px',lineHeight:'32px',color:'rgba(255,255,255,0.8)'}}>
-            Serving the body of Christ
+            Organization management system
           </p>
           <div className="mt-10 rounded-full"
                style={{width:'64px',height:'4px',backgroundColor:'rgba(201,168,76,0.40)'}} />
@@ -88,7 +90,7 @@ export default function Login() {
         {/* Footer */}
         <footer className="relative z-10 text-center md:text-left mt-auto">
           <p style={{fontSize:'14px',letterSpacing:'0.05em',color:'rgba(255,255,255,0.6)'}}>
-            Methodist Church Ghana — Wesleyan International Society
+            Organization Management System
           </p>
         </footer>
       </section>
@@ -125,7 +127,7 @@ export default function Login() {
                 Email Address
               </label>
               <input id="email" type="email" className="input-field"
-                     placeholder="admin@wis-cms.local"
+                     placeholder="you@example.com"
                      value={form.email} onChange={e => setForm({...form, email: e.target.value})}
                      required autoFocus />
             </div>

@@ -24,7 +24,7 @@ export default function TopBar() {
             style={{borderBottom:'1px solid var(--color-surface-border)'}}>
       <div>
         <h1 className="text-xl font-semibold" style={{fontFamily:'var(--font-display)', color:'var(--color-navy)'}}>
-          {titles[pathname] ?? 'WIS-CMS'}
+          {titles[pathname] ?? 'Admin Portal'}
         </h1>
         <p className="text-xs mt-0.5" style={{color:'#9ca3af'}}>
           {new Date().toLocaleDateString('en-GH', { weekday:'long', year:'numeric', month:'long', day:'numeric' })}
