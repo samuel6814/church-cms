@@ -1,0 +1,26 @@
+.git
+.github
+.env
+.env.*
+!.env.example
+!.env.production.example
+!.env.staging.example
+node_modules
+vendor
+public/hot
+public/storage
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+tests
+.phpunit.result.cache
+prod_assist
+docs
+README.md
+npm-debug.log
+Dockerfile
+.dockerignore
+
+# Keep bootstrap/cache directory; exclude stale cached files only
+bootstrap/cache/*.php

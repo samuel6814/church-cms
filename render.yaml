@@ -1,0 +1,52 @@
+# Render Blueprint — Church CMS (Laravel + React)
+# Docs: docs/DEPLOYMENT.md · prod_assist/production-laravel.md
+
+services:
+  - type: web
+    name: church-cms
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /up
+    autoDeploy: true
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_NAME
+        value: WIS-CMS
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: warning
+      - key: AUTORUN_LARAVEL_MIGRATION
+        value: "true"
+      - key: PHP_OPCACHE_ENABLE
+        value: "1"
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: QUEUE_CONNECTION
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: SESSION_DRIVER
+        value: database
+      - key: SESSION_ENCRYPT
+        value: "false"
+      - key: BROADCAST_CONNECTION
+        value: log
+      - key: FILESYSTEM_DISK
+        value: local
+      - key: MAIL_MAILER
+        value: log
+      # Set in Render Dashboard (secrets):
+      - key: APP_KEY
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: DB_URL
+        sync: false
+      # Optional — external cron (prod_assist/render-external-cron-pattern.md):
+      - key: CRON_TOKEN
+        sync: false

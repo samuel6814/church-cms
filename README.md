@@ -289,9 +289,13 @@ SMS (Arkesel) and mail settings will be added when the communication module is i
 
 ## Contributing
 
-1. Create a feature branch from `main`.
+**Hackathon / UI work:** see [`docs/HACKATHON.md`](docs/HACKATHON.md) (UI-only scope, `develop` + `feat/*` branches).
+
+**Deploy (Render + Neon, optional Vercel):** see [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) and [`prod_assist/`](prod_assist/).
+
+1. Branch from `develop` (not `main`) — [`prod_assist/git-workflow.md`](prod_assist/git-workflow.md).
 2. Follow existing patterns: Form Requests, API Resources, branch scoping, activity logging.
-3. Run `php artisan test` and ensure the app loads at `http://127.0.0.1:8000` before opening a pull request.
+3. Run `php artisan test` and ensure the app loads before opening a pull request.
 
 ---
 
