@@ -18,6 +18,8 @@ Browser  →  https://your-app.vercel.app          (React + React Router)
 
 **Important:** On Render, use **Environment: Docker** and the root [`Dockerfile`](../Dockerfile). Do **not** select Render’s native PHP environment — PHP runs inside the container image only.
 
+**Step-by-step setup:** [DEPLOY-WALKTHROUGH.md](./DEPLOY-WALKTHROUGH.md) (Neon → Render Docker → Vercel → CORS → smoke tests).
+
 ---
 
 ## Repository layout (deploy-related)

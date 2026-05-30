@@ -53,7 +53,8 @@ Login after seed: `admin@wis-cms.local` / `Admin@12345`
 
 ## Production deploy
 
-See **[DEPLOYMENT.md](./DEPLOYMENT.md)** — Vercel (frontend) + Render Docker (API) + Neon (database).
+- **Setup walkthrough:** [DEPLOY-WALKTHROUGH.md](./DEPLOY-WALKTHROUGH.md)  
+- **Reference:** [DEPLOYMENT.md](./DEPLOYMENT.md) — Vercel (frontend) + Render Docker (API) + Neon (database).
 
 Reference playbooks (do not duplicate blindly; verify versions in repo):
 
