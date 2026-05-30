@@ -77,11 +77,11 @@ export default function Login() {
 
           <h1 className="font-bold mb-1"
               style={{fontFamily:'var(--font-display)',fontSize:'48px',lineHeight:'60px',letterSpacing:'-0.02em',color:'var(--color-gold-light)'}}>
-            Admin Portal
+            Church CMS
           </h1>
           <p className="italic"
              style={{fontFamily:'var(--font-display)',fontSize:'24px',lineHeight:'32px',color:'rgba(255,255,255,0.8)'}}>
-            Organization management system
+            Church management, simplified
           </p>
           <div className="mt-10 rounded-full"
                style={{width:'64px',height:'4px',backgroundColor:'rgba(201,168,76,0.40)'}} />
@@ -90,7 +90,7 @@ export default function Login() {
         {/* Footer */}
         <footer className="relative z-10 text-center md:text-left mt-auto">
           <p style={{fontSize:'14px',letterSpacing:'0.05em',color:'rgba(255,255,255,0.6)'}}>
-            Organization Management System
+            Church Management System
           </p>
         </footer>
       </section>

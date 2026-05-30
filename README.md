@@ -1,8 +1,8 @@
-# WIS-CMS
+# Church CMS
 
-**Wesleyan International Society Church Management System** — a full-stack web application for The Methodist Church Ghana — Wesleyan International Society.
+**Church CMS** is a full-stack church management application for members, visitors, departments, attendance, finance, and communications — scoped to a single congregation or branch today, with room to grow.
 
-WIS-CMS replaces paper-based church administration with a secure, branch-scoped platform for member records, visitors, departments, and (planned) attendance, finance, and communications.
+Church CMS replaces paper-based church administration with a secure, branch-scoped platform for member records, visitors, departments, and related ministry operations.
 
 [![CI](https://github.com/rudolphOtoo/wis-cms/actions/workflows/ci.yml/badge.svg)](https://github.com/rudolphOtoo/wis-cms/actions/workflows/ci.yml)
 ![Laravel](https://img.shields.io/badge/Laravel-13-red?style=flat-square&logo=laravel)
@@ -14,7 +14,7 @@ WIS-CMS replaces paper-based church administration with a secure, branch-scoped 
 
 ## About
 
-Built as a pro bono project for a congregation of approximately 800–1,000 members. The system is designed for a single branch today, with UUID-based models and branch scoping on the API to support growth.
+Built for churches and congregations that need structured member and ministry management (roughly 800–1,000 members at initial scale). The system is designed for a single branch today, with UUID-based models and branch scoping on the API to support growth.
 
 ---
 
@@ -89,7 +89,7 @@ php artisan key:generate
 Configure the database. **PostgreSQL** (matches `docker-compose.yml`):
 
 ```env
-APP_NAME="WIS-CMS"
+APP_NAME="Church CMS"
 APP_URL=http://127.0.0.1:8000
 
 DB_CONNECTION=pgsql
@@ -116,7 +116,7 @@ php artisan migrate --seed
 
 Seeders create:
 
-- Default branch (Wesleyan International Society, Kumasi)
+- Default branch (seeded main organization branch)
 - Roles and permissions (six roles)
 - Service types and finance categories
 - Super admin user (see below)
@@ -281,7 +281,7 @@ Serve the application with a proper web server (nginx, Apache, or Laravel Forge)
 |----------|---------|
 | `APP_URL` | Application URL (used for links and Sanctum) |
 | `DB_*` | Database connection (use `pgsql` in production) |
-| `VITE_APP_NAME` | Frontend app title |
+| `VITE_APP_NAME` | Frontend app title (e.g. `Church CMS`) |
 
 SMS (Arkesel) and mail settings will be added when the communication module is implemented.
 
@@ -310,4 +310,4 @@ MIT License. See the repository license file for details.
 
 ## Acknowledgements
 
-Built for **The Methodist Church Ghana — Wesleyan International Society**.
+Built as an open-source church management platform for congregations and membership administration.

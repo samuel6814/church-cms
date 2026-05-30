@@ -35,8 +35,8 @@ export default function Sidebar() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M10 10h4M12 7v3"/>
           </svg>
           <div>
-            <div className="text-white text-sm font-bold" style={{fontFamily:'var(--font-display)'}}>Admin Portal</div>
-            <div className="text-xs" style={{color:'rgba(255,255,255,0.4)'}}>Organization CMS</div>
+            <div className="text-white text-sm font-bold" style={{fontFamily:'var(--font-display)'}}>Church CMS</div>
+            <div className="text-xs" style={{color:'rgba(255,255,255,0.4)'}}>Member & ministry management</div>
           </div>
         </div>
       </div>
